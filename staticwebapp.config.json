@@ -1,0 +1,60 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/css/*", "/js/*", "/assets/*", "*.jpg", "*.png", "*.svg"]
+  },
+  "routes": [
+    {
+      "route": "/about",
+      "rewrite": "/about.html"
+    },
+    {
+      "route": "/portfolio",
+      "rewrite": "/portfolio.html"
+    },
+    {
+      "route": "/contact",
+      "rewrite": "/contact.html"
+    },
+    {
+      "route": "/projects/geo-insight",
+      "rewrite": "/projects/geo-insight.html"
+    },
+    {
+      "route": "/projects/predictive-maintenance",
+      "rewrite": "/projects/predictive-maintenance.html"
+    },
+    {
+      "route": "/projects/chat-with-assets",
+      "rewrite": "/projects/chat-with-assets.html"
+    },
+    {
+      "route": "/projects/legal-eagle",
+      "rewrite": "/projects/legal-eagle.html"
+    },
+    {
+      "route": "/projects/policy-guard",
+      "rewrite": "/projects/policy-guard.html"
+    },
+    {
+      "route": "/projects/rl-supply-chain",
+      "rewrite": "/projects/rl-supply-chain.html"
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    }
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'"
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".js": "application/javascript",
+    ".css": "text/css"
+  }
+}

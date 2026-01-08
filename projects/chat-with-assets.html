@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Chat-with-Assets RAG - Enterprise knowledge retrieval system enabling field operators to query technical manuals with Azure AI Search">
+
+    <title>Chat-with-Assets RAG | David Fernandez</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/photo.jpg" type="image/jpeg">
+</head>
+
+<body class="theme-chat-assets">
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="../assets/photo.jpg" alt="David Fernandez">
+            <span>David Fernandez</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../portfolio.html">Portfolio</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="project-hero fade-in">
+            <div class="project-canvas" id="projectCanvas"></div>
+            <h1>Chat-with-Assets RAG</h1>
+            <p>Enterprise Knowledge Retrieval for Technical Documentation</p>
+
+            <div class="project-meta">
+                <span>Azure AI Search</span>
+                <span>Next.js</span>
+                <span>RAG Pipeline</span>
+                <span>Gemini 3 Flash</span>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <div class="project-content">
+            <!-- Problem -->
+            <section class="project-section">
+                <h2>The Problem</h2>
+                <p>
+                    Field operators in the energy sector spend hours searching through hundreds
+                    of pages of technical drilling manuals, P&IDs, and equipment specifications.
+                    Critical information is buried in PDFs, and institutional knowledge walks
+                    out the door when experienced engineers retire.
+                </p>
+            </section>
+
+            <!-- Solution -->
+            <section class="project-section">
+                <h2>The Solution</h2>
+                <p>
+                    Chat-with-Assets is a Retrieval-Augmented Generation (RAG) pipeline that
+                    indexes 500+ pages of technical documentation and enables natural language
+                    queries. Field operators can ask questions like "What's the max pressure
+                    for valve V-2045?" and get instant, accurate answers with source citations.
+                </p>
+                <p>
+                    Built on Azure AI Search with Pinecone vector storage and Gemini 3 Flash
+                    for generation, the system delivers sub-200ms responses while maintaining
+                    enterprise security and compliance requirements.
+                </p>
+            </section>
+
+            <!-- Key Metrics -->
+            <section class="project-section">
+                <h2>Key Metrics</h2>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-value">&lt;200ms</div>
+                        <div class="metric-label">Response Latency</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">500+</div>
+                        <div class="metric-label">Pages Indexed</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">95%</div>
+                        <div class="metric-label">Answer Accuracy</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">80%</div>
+                        <div class="metric-label">Time Saved</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <section class="project-section">
+                <h2>Architecture</h2>
+                <ul>
+                    <li><strong>Document Processing:</strong> Unstructured.io for multi-column PDF parsing</li>
+                    <li><strong>Embeddings:</strong> Azure OpenAI text-embedding-ada-002</li>
+                    <li><strong>Vector Store:</strong> Pinecone with hybrid search (dense + sparse)</li>
+                    <li><strong>LLM:</strong> Gemini 3 Flash with structured output</li>
+                    <li><strong>Frontend:</strong> Next.js with streaming responses</li>
+                    <li><strong>Security:</strong> Azure AD authentication, role-based access</li>
+                </ul>
+            </section>
+
+            <!-- Technologies -->
+            <section class="project-section">
+                <h2>Technologies</h2>
+                <ul>
+                    <li>Azure AI Search</li>
+                    <li>Pinecone Vector Database</li>
+                    <li>Gemini 3 Flash</li>
+                    <li>LangChain</li>
+                    <li>Next.js / React</li>
+                    <li>Unstructured.io</li>
+                    <li>TypeScript</li>
+                </ul>
+            </section>
+
+            <!-- CTA -->
+            <section class="project-section text-center">
+                <a href="https://github.com/davidfertube/chat-with-assets" target="_blank" rel="noopener" class="btn">
+                    View on GitHub
+                </a>
+                <a href="../portfolio.html" class="btn mt-sm" style="margin-left: 1rem;">
+                    ← Back to Portfolio
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
+        </div>
+        <p>© 2026 David Fernandez</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/project-animations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new ProjectAnimations.DocumentNodes('#projectCanvas', {
+                color: 0x3b82f6
+            });
+        });
+
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

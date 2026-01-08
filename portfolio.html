@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio - 6 production-ready AI projects for the Energy Corridor including computer vision, RAG pipelines, and multi-agent systems">
+
+    <title>Portfolio | David Fernandez</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/photo.jpg" type="image/jpeg">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/photo.jpg" alt="David Fernandez">
+            <span>David Fernandez</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <header class="text-center fade-in">
+                <h1>Portfolio</h1>
+                <p>6 production-ready AI projects for the Energy Corridor</p>
+            </header>
+
+            <div class="portfolio-grid">
+                <!-- Project 1: Geo-Insight HSE -->
+                <a href="projects/geo-insight.html" class="project-card fade-in">
+                    <h3>Geo-Insight HSE</h3>
+                    <p>Real-time PPE detection for HSE compliance using computer vision deployed at the edge.</p>
+                    <span class="tech-stack">YOLOv8 • Azure Container Apps</span>
+                </a>
+
+                <!-- Project 2: Predictive Maintenance -->
+                <a href="projects/predictive-maintenance.html" class="project-card fade-in">
+                    <h3>Predictive Maintenance</h3>
+                    <p>Equipment failure prediction dashboard using LSTM neural networks on NASA turbofan data.</p>
+                    <span class="tech-stack">LSTM • NASA Dataset • Grafana</span>
+                </a>
+
+                <!-- Project 3: Chat-with-Assets RAG -->
+                <a href="projects/chat-with-assets.html" class="project-card fade-in">
+                    <h3>Chat-with-Assets RAG</h3>
+                    <p>Enterprise RAG pipeline enabling field operators to query 500+ pages of technical manuals.</p>
+                    <span class="tech-stack">Azure AI Search • Next.js</span>
+                </a>
+
+                <!-- Project 4: Legal-Eagle Agent -->
+                <a href="projects/legal-eagle.html" class="project-card fade-in">
+                    <h3>Legal-Eagle Agent</h3>
+                    <p>Multi-agent system for autonomous MSA contract review with deep reasoning chains.</p>
+                    <span class="tech-stack">LangGraph • Azure OpenAI • Gemini</span>
+                </a>
+
+                <!-- Project 5: Policy-Guard Compliance -->
+                <a href="projects/policy-guard.html" class="project-card fade-in">
+                    <h3>Policy-Guard Compliance</h3>
+                    <p>Policy-as-Code compliance engine validating system outputs against regulatory rules.</p>
+                    <span class="tech-stack">DSPy • Web Demo</span>
+                </a>
+
+                <!-- Project 6: RL Supply Chain -->
+                <a href="projects/rl-supply-chain.html" class="project-card fade-in">
+                    <h3>RL Supply Chain</h3>
+                    <p>Reinforcement learning optimization for supply chain logistics and edge-case testing.</p>
+                    <span class="tech-stack">Stable Baselines3 • Azure ML</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
+            <a href="https://huggingface.co/davidfertube" target="_blank" rel="noopener">HuggingFace</a>
+        </div>
+        <p>© 2026 David Fernandez</p>
+    </footer>
+
+    <script>
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact David Fernandez - Industrial AI Solutions Architect">
+
+    <title>Contact | David Fernandez</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/photo.jpg" type="image/jpeg">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/photo.jpg" alt="David Fernandez">
+            <span>David Fernandez</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="contact-container fade-in">
+            <div class="contact-canvas" id="contactCanvas"></div>
+            <h1>Get in Touch</h1>
+            <p>Interested in Industrial AI solutions for the Energy Corridor?<br>Let's connect.</p>
+
+            <div class="contact-links">
+                <a href="mailto:davidfertube@gmail.com" class="contact-link">Email</a>
+                <a href="https://github.com/davidfertube" target="_blank" rel="noopener" class="contact-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener"
+                    class="contact-link">LinkedIn</a>
+                <a href="https://x.com/davidfertube" target="_blank" rel="noopener" class="contact-link">Twitter</a>
+                <a href="https://huggingface.co/davidfertube" target="_blank" rel="noopener"
+                    class="contact-link">HuggingFace</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 David Fernandez</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script>
+        // Initialize 3D animation for contact page
+        document.addEventListener('DOMContentLoaded', () => {
+            new AnimatedSphere('#contactCanvas', {
+                color: 0x4f46e5,
+                rotationSpeed: 0.0015,
+                radius: 1.2
+            });
+        });
+
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="RL Supply Chain - Reinforcement learning optimization for supply chain logistics using Stable Baselines3 and Azure ML">
+
+    <title>RL Supply Chain | David Fernandez</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/photo.jpg" type="image/jpeg">
+</head>
+
+<body class="theme-rl-supply">
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="../assets/photo.jpg" alt="David Fernandez">
+            <span>David Fernandez</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../portfolio.html">Portfolio</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="project-hero fade-in">
+            <div class="project-canvas" id="projectCanvas"></div>
+            <h1>RL Supply Chain</h1>
+            <p>Reinforcement Learning for Supply Chain Optimization</p>
+
+            <div class="project-meta">
+                <span>Stable Baselines3</span>
+                <span>Azure ML</span>
+                <span>Gym Environment</span>
+                <span>Adversarial Testing</span>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <div class="project-content">
+            <!-- Problem -->
+            <section class="project-section">
+                <h2>The Problem</h2>
+                <p>
+                    Supply chain logistics in energy operations involve complex decision-making
+                    under uncertainty. Traditional optimization fails to handle unexpected disruptions,
+                    demand spikes, and edge cases. Before deploying AI decision systems, companies
+                    need to stress-test business logic against adversarial scenarios.
+                </p>
+            </section>
+
+            <!-- Solution -->
+            <section class="project-section">
+                <h2>The Solution</h2>
+                <p>
+                    This project implements a custom OpenAI Gym environment simulating energy
+                    sector supply chain operations. Autonomous RL agents learn to optimize
+                    inventory, routing, and scheduling while adversarial agents stress-test
+                    the system to identify edge-case failures.
+                </p>
+                <p>
+                    The dual-agent approach ensures production AI systems are robust before
+                    deployment, identifying 15+ critical failure modes in simulation.
+                </p>
+            </section>
+
+            <!-- Key Metrics -->
+            <section class="project-section">
+                <h2>Key Metrics</h2>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-value">15+</div>
+                        <div class="metric-label">Edge Cases Found</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">PPO</div>
+                        <div class="metric-label">RL Algorithm</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">10K</div>
+                        <div class="metric-label">Training Episodes</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">Azure ML</div>
+                        <div class="metric-label">Training Platform</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <section class="project-section">
+                <h2>Architecture</h2>
+                <ul>
+                    <li><strong>Environment:</strong> Custom OpenAI Gym with supply chain simulation</li>
+                    <li><strong>Optimizer Agent:</strong> PPO algorithm for decision optimization</li>
+                    <li><strong>Adversarial Agent:</strong> Stress-tests by creating worst-case scenarios</li>
+                    <li><strong>State Space:</strong> Inventory levels, demand forecasts, transit times</li>
+                    <li><strong>Action Space:</strong> Order quantities, routing decisions, scheduling</li>
+                    <li><strong>Training:</strong> Azure ML compute clusters for distributed training</li>
+                </ul>
+            </section>
+
+            <!-- Technologies -->
+            <section class="project-section">
+                <h2>Technologies</h2>
+                <ul>
+                    <li>Stable Baselines3</li>
+                    <li>OpenAI Gym</li>
+                    <li>Azure Machine Learning</li>
+                    <li>Python (NumPy, Pandas)</li>
+                    <li>MLflow (experiment tracking)</li>
+                    <li>Docker</li>
+                </ul>
+            </section>
+
+            <!-- CTA -->
+            <section class="project-section text-center">
+                <a href="https://github.com/davidfertube/rl-supply-chain" target="_blank" rel="noopener" class="btn">
+                    View on GitHub
+                </a>
+                <a href="../portfolio.html" class="btn mt-sm" style="margin-left: 1rem;">
+                    ← Back to Portfolio
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
+        </div>
+        <p>© 2026 David Fernandez</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/project-animations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new ProjectAnimations.FlowPipeline('#projectCanvas', {
+                color: 0x06b6d4
+            });
+        });
+
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

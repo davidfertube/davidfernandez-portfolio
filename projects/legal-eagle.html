@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Legal-Eagle Agent - Multi-agent system for autonomous MSA contract review using LangGraph, Azure OpenAI, and Gemini">
+
+    <title>Legal-Eagle Agent | David Fernandez</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/photo.jpg" type="image/jpeg">
+</head>
+
+<body class="theme-legal-eagle">
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="../assets/photo.jpg" alt="David Fernandez">
+            <span>David Fernandez</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../portfolio.html">Portfolio</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="project-hero fade-in">
+            <div class="project-canvas" id="projectCanvas"></div>
+            <h1>Legal-Eagle Agent</h1>
+            <p>Multi-Agent MSA Contract Review System</p>
+
+            <div class="project-meta">
+                <span>LangGraph</span>
+                <span>Azure OpenAI</span>
+                <span>Gemini</span>
+                <span>Multi-Agent</span>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <div class="project-content">
+            <!-- Problem -->
+            <section class="project-section">
+                <h2>The Problem</h2>
+                <p>
+                    Master Service Agreements (MSAs) in the energy sector are complex legal
+                    documents that require extensive manual review. Legal teams spend weeks
+                    reviewing upstream lease agreements, often missing critical clauses that
+                    expose the company to liability or unfavorable terms.
+                </p>
+            </section>
+
+            <!-- Solution -->
+            <section class="project-section">
+                <h2>The Solution</h2>
+                <p>
+                    Legal-Eagle is a multi-agent agentic workflow built with LangGraph that
+                    autonomously audits MSA contracts. Multiple specialized agents analyze
+                    different aspects: clause extraction, risk assessment, compliance checking,
+                    and recommendation generation.
+                </p>
+                <p>
+                    The system implements "Deep Think" reasoning chains for complex clause
+                    verification, ensuring human-in-the-loop approval for high-stakes decisions.
+                </p>
+            </section>
+
+            <!-- Key Metrics -->
+            <section class="project-section">
+                <h2>Key Metrics</h2>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-value">30%</div>
+                        <div class="metric-label">Review Time Reduction</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">4</div>
+                        <div class="metric-label">Specialized Agents</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">98%</div>
+                        <div class="metric-label">Clause Detection</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">HITL</div>
+                        <div class="metric-label">Human-in-the-Loop</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <section class="project-section">
+                <h2>Architecture</h2>
+                <ul>
+                    <li><strong>Orchestrator:</strong> LangGraph state machine for agent coordination</li>
+                    <li><strong>Clause Extractor Agent:</strong> Identifies key terms, obligations, liabilities</li>
+                    <li><strong>Risk Assessor Agent:</strong> Scores clauses by potential exposure</li>
+                    <li><strong>Compliance Agent:</strong> Checks against internal policy templates</li>
+                    <li><strong>Summarizer Agent:</strong> Generates executive summary with recommendations</li>
+                    <li><strong>Deep Think:</strong> Chain-of-thought reasoning for complex clauses</li>
+                </ul>
+            </section>
+
+            <!-- Technologies -->
+            <section class="project-section">
+                <h2>Technologies</h2>
+                <ul>
+                    <li>LangGraph / LangChain</li>
+                    <li>Azure OpenAI (GPT-4)</li>
+                    <li>Gemini Flash (for structured extraction)</li>
+                    <li>Python (FastAPI)</li>
+                    <li>Cosmos DB (state persistence)</li>
+                    <li>Azure Functions</li>
+                </ul>
+            </section>
+
+            <!-- CTA -->
+            <section class="project-section text-center">
+                <a href="https://github.com/davidfertube/legal-eagle-agent" target="_blank" rel="noopener" class="btn">
+                    View on GitHub
+                </a>
+                <a href="../portfolio.html" class="btn mt-sm" style="margin-left: 1rem;">
+                    ← Back to Portfolio
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
+        </div>
+        <p>© 2026 David Fernandez</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/project-animations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new ProjectAnimations.DNAHelix('#projectCanvas', {
+                color: 0x8b5cf6
+            });
+        });
+
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

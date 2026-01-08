@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Predictive Maintenance Dashboard - LSTM-based equipment failure prediction using NASA turbofan dataset with Grafana visualization">
+
+    <title>Predictive Maintenance | David Fernandez</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/photo.jpg" type="image/jpeg">
+</head>
+
+<body class="theme-predictive">
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="../assets/photo.jpg" alt="David Fernandez">
+            <span>David Fernandez</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../portfolio.html">Portfolio</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="project-hero fade-in">
+            <div class="project-canvas" id="projectCanvas"></div>
+            <h1>Predictive Maintenance</h1>
+            <p>Equipment Failure Prediction Dashboard</p>
+
+            <div class="project-meta">
+                <span>LSTM</span>
+                <span>NASA Dataset</span>
+                <span>Grafana</span>
+                <span>Time-Series</span>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <div class="project-content">
+            <!-- Problem -->
+            <section class="project-section">
+                <h2>The Problem</h2>
+                <p>
+                    Unplanned equipment failures in energy operations cost millions in downtime
+                    and emergency repairs. Traditional maintenance schedules are either too frequent
+                    (wasting resources) or too infrequent (risking failures). Operators need to
+                    predict failures before they happen.
+                </p>
+            </section>
+
+            <!-- Solution -->
+            <section class="project-section">
+                <h2>The Solution</h2>
+                <p>
+                    This dashboard uses LSTM neural networks trained on NASA's C-MAPSS turbofan
+                    engine degradation dataset to predict Remaining Useful Life (RUL) of industrial
+                    equipment. The model analyzes sensor time-series data to forecast when
+                    maintenance is needed.
+                </p>
+                <p>
+                    Grafana dashboards provide real-time visualization of equipment health scores,
+                    enabling maintenance teams to prioritize interventions and optimize schedules.
+                </p>
+            </section>
+
+            <!-- Key Metrics -->
+            <section class="project-section">
+                <h2>Key Metrics</h2>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-value">40%</div>
+                        <div class="metric-label">Downtime Reduction</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">$2M+</div>
+                        <div class="metric-label">Annual Savings</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">92%</div>
+                        <div class="metric-label">Prediction Accuracy</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">7 days</div>
+                        <div class="metric-label">Advance Warning</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <section class="project-section">
+                <h2>Architecture</h2>
+                <ul>
+                    <li><strong>Data Source:</strong> NASA C-MAPSS (Commercial Modular Aero-Propulsion System
+                        Simulation)</li>
+                    <li><strong>Model:</strong> LSTM with attention mechanism for sequence modeling</li>
+                    <li><strong>Features:</strong> 21 sensor readings + operational settings</li>
+                    <li><strong>Visualization:</strong> Grafana dashboards with real-time alerts</li>
+                    <li><strong>Deployment:</strong> Azure ML for training, FastAPI for inference</li>
+                </ul>
+            </section>
+
+            <!-- Technologies -->
+            <section class="project-section">
+                <h2>Technologies</h2>
+                <ul>
+                    <li>TensorFlow / Keras (LSTM)</li>
+                    <li>NASA C-MAPSS Dataset</li>
+                    <li>Grafana</li>
+                    <li>Azure Machine Learning</li>
+                    <li>Python (FastAPI, Pandas, NumPy)</li>
+                    <li>Docker</li>
+                </ul>
+            </section>
+
+            <!-- CTA -->
+            <section class="project-section text-center">
+                <a href="https://github.com/davidfertube/predictive-maintenance" target="_blank" rel="noopener"
+                    class="btn">
+                    View on GitHub
+                </a>
+                <a href="../portfolio.html" class="btn mt-sm" style="margin-left: 1rem;">
+                    ← Back to Portfolio
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
+        </div>
+        <p>© 2026 David Fernandez</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/project-animations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new ProjectAnimations.MachineryMesh('#projectCanvas', {
+                color: 0xf59e0b
+            });
+        });
+
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Geo-Insight HSE - Real-time PPE detection for HSE compliance using YOLOv8 computer vision deployed on Azure Edge">
+
+    <title>Geo-Insight HSE | David Fernandez</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../assets/photo.jpg" type="image/jpeg">
+</head>
+
+<body class="theme-geo-insight">
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="../index.html" class="nav-logo">
+            <img src="../assets/photo.jpg" alt="David Fernandez">
+            <span>David Fernandez</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../portfolio.html">Portfolio</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="project-hero fade-in">
+            <div class="project-canvas" id="projectCanvas"></div>
+            <h1>Geo-Insight HSE</h1>
+            <p>Real-time PPE Detection for HSE Compliance</p>
+
+            <div class="project-meta">
+                <span>YOLOv8</span>
+                <span>Azure Container Apps</span>
+                <span>Edge AI</span>
+                <span>Computer Vision</span>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <div class="project-content">
+            <!-- Problem -->
+            <section class="project-section">
+                <h2>The Problem</h2>
+                <p>
+                    Health, Safety, and Environment (HSE) is the #1 priority in energy operations.
+                    Manual PPE compliance monitoring is slow, inconsistent, and impossible to scale
+                    across large industrial sites. Safety violations often go undetected until
+                    incidents occur.
+                </p>
+            </section>
+
+            <!-- Solution -->
+            <section class="project-section">
+                <h2>The Solution</h2>
+                <p>
+                    Geo-Insight HSE is a real-time computer vision pipeline that automatically
+                    detects PPE violations (helmets, vests, safety glasses) using YOLOv8 deployed
+                    on Azure Edge devices. The system processes live camera feeds and sends
+                    instant alerts to supervisors.
+                </p>
+                <p>
+                    Built for air-gapped OT environments, the model runs locally on edge devices
+                    with sub-100ms latency, ensuring compliance even without internet connectivity.
+                </p>
+            </section>
+
+            <!-- Key Metrics -->
+            <section class="project-section">
+                <h2>Key Metrics</h2>
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-value">99%</div>
+                        <div class="metric-label">Detection Accuracy</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">&lt;100ms</div>
+                        <div class="metric-label">Inference Latency</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">24/7</div>
+                        <div class="metric-label">Continuous Monitoring</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">45%</div>
+                        <div class="metric-label">Violation Reduction</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Architecture -->
+            <section class="project-section">
+                <h2>Architecture</h2>
+                <ul>
+                    <li><strong>Model:</strong> YOLOv8 fine-tuned on industrial PPE dataset</li>
+                    <li><strong>Edge Runtime:</strong> ONNX optimized for Azure Stack Edge / Jetson Nano</li>
+                    <li><strong>Data Flow:</strong> Camera → Edge Device → OPC UA → SCADA/HMI</li>
+                    <li><strong>Alerts:</strong> Real-time notifications to supervisors via Teams/SMS</li>
+                    <li><strong>Compliance:</strong> Designed for Purdue Model Level 3 (air-gapped)</li>
+                </ul>
+            </section>
+
+            <!-- Technologies -->
+            <section class="project-section">
+                <h2>Technologies</h2>
+                <ul>
+                    <li>YOLOv8 (Ultralytics)</li>
+                    <li>Azure Container Apps / Azure Stack Edge</li>
+                    <li>ONNX Runtime</li>
+                    <li>Python (FastAPI)</li>
+                    <li>OPC UA Protocol</li>
+                    <li>Docker / Kubernetes</li>
+                </ul>
+            </section>
+
+            <!-- CTA -->
+            <section class="project-section text-center">
+                <a href="https://github.com/davidfertube/geo-insight-hse" target="_blank" rel="noopener" class="btn">
+                    View on GitHub
+                </a>
+                <a href="../portfolio.html" class="btn mt-sm" style="margin-left: 1rem;">
+                    ← Back to Portfolio
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
+        </div>
+        <p>© 2026 David Fernandez</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/project-animations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new ProjectAnimations.ParticleField('#projectCanvas', {
+                color: 0x10b981
+            });
+        });
+
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
