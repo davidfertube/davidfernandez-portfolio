@@ -2,7 +2,7 @@
 
 **Industrial AI Solutions Engineer | Azure, Gemini & Agentic RAG**
 
-🔗 **Live Site**: [davidfernandez.dev](https://davidfernandez.dev)
+🔗 **Live Site**: [davidfernandez.dev](https://www.davidfernandez.dev)
 
 ---
 
