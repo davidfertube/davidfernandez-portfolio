@@ -35,61 +35,54 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="page-centered">
-        <div class="content-card">
-            <div class="card-header">
-                </div>
+    <main class="portfolio-page">
+        <div class="portfolio-layout">
+            <div class="portfolio-header">
                 <h1>Portfolio</h1>
-                <p class="role">Production-ready AI projects for energy and enterprise</p>
+                <p class="portfolio-subtitle">Production-ready AI projects for energy and enterprise</p>
             </div>
 
-            <div class="projects-grid">
-                <a href="projects/geo-insight.html" class="project-card-themed">
+            <div class="portfolio-grid-compact">
+                <a href="projects/geo-insight.html" class="project-card-compact">
                     <h3>Geo-Insight HSE</h3>
                     <p>Real-time PPE detection for HSE compliance using computer vision.</p>
-                    <span class="tech">YOLOv8 • Azure Container Apps</span>
+                    <span class="tech-stack">YOLOv8 • Azure Container Apps</span>
                 </a>
 
-                <a href="projects/predictive-maintenance.html" class="project-card-themed">
+                <a href="projects/predictive-maintenance.html" class="project-card-compact">
                     <h3>Predictive Maintenance</h3>
                     <p>Equipment failure prediction using LSTM neural networks.</p>
-                    <span class="tech">LSTM • NASA Dataset • Grafana</span>
+                    <span class="tech-stack">LSTM • NASA Dataset • Grafana</span>
                 </a>
 
-                <a href="projects/chat-with-assets.html" class="project-card-themed">
+                <a href="projects/chat-with-assets.html" class="project-card-compact">
                     <h3>Chat-with-Assets RAG</h3>
                     <p>Enterprise RAG pipeline for technical documentation.</p>
-                    <span class="tech">Azure AI Search • Next.js</span>
+                    <span class="tech-stack">Azure AI Search • Next.js</span>
                 </a>
 
-                <a href="projects/legal-eagle.html" class="project-card-themed">
+                <a href="projects/legal-eagle.html" class="project-card-compact">
                     <h3>Legal-Eagle Agent</h3>
                     <p>Multi-agent system for contract review and analysis.</p>
-                    <span class="tech">LangGraph • Azure OpenAI • Gemini</span>
+                    <span class="tech-stack">LangGraph • Azure OpenAI • Gemini</span>
                 </a>
 
-                <a href="projects/policy-guard.html" class="project-card-themed">
+                <a href="projects/policy-guard.html" class="project-card-compact">
                     <h3>Policy-Guard Compliance</h3>
                     <p>Policy-as-Code engine for regulatory compliance.</p>
-                    <span class="tech">DSPy • Web Demo</span>
+                    <span class="tech-stack">DSPy • Web Demo</span>
                 </a>
 
-                <a href="projects/rl-supply-chain.html" class="project-card-themed">
+                <a href="projects/rl-supply-chain.html" class="project-card-compact">
                     <h3>RL Supply Chain</h3>
                     <p>Reinforcement learning for supply chain optimization.</p>
-                    <span class="tech">Stable Baselines3 • Azure ML</span>
+                    <span class="tech-stack">Stable Baselines3 • Azure ML</span>
                 </a>
             </div>
         </div>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="js/animation.js"></script>
     <script>
-        // Initialize 3D animation
-        document.addEventListener('DOMContentLoaded', () => {
-        });
-
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }

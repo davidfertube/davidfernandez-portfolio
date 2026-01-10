@@ -35,87 +35,82 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="about-compact">
-        <div class="about-grid">
-            <!-- Left: Photo + Info -->
-            <div class="about-profile">
-                </div>
-                <img src="assets/photo.jpg" alt="David Fernandez" class="profile-photo-sm"
-                    style="margin-top: -60px; position: relative; z-index: 10;">
+    <main class="about-page-full">
+        <div class="about-full-layout">
+            <!-- Left Column: Profile -->
+            <div class="about-left">
+                <img src="assets/photo.jpg" alt="David Fernandez" class="about-photo-large">
                 <h1>David Fernandez</h1>
-                <p class="role-sm">Industrial AI Engineer</p>
-                <p class="location-sm">Katy, TX</p>
-                <p class="summary-sm">Building production-grade AI systems for energy and enterprise. Specializing in
-                    multi-agent systems, RAG pipelines, and computer vision for industrial applications.</p>
+                <p class="subtitle">Industrial AI Engineer</p>
+                <p class="location">Katy, TX</p>
+
+                <div class="about-summary">
+                    <p>Building production-grade AI systems for energy and enterprise.</p>
+                    <p>Specializing in multi-agent systems, RAG pipelines, and computer vision for industrial
+                        applications.</p>
+                </div>
             </div>
 
-            <!-- Skills -->
-            <section class="about-card">
-                <h2>Skills</h2>
-                <div class="tag-list-sm">
-                    <span>Azure AI</span>
-                    <span>Generative AI</span>
-                    <span>LLM Ops</span>
-                    <span>RAG Pipelines</span>
-                    <span>Computer Vision</span>
-                    <span>SCADA/OT</span>
-                    <span>Power BI</span>
-                    <span>Python</span>
-                    <span>Databricks</span>
-                    <span>Digital Twins</span>
-                    <span>Predictive Maintenance</span>
-                    <span>MLOps</span>
+            <!-- Right Column: Details -->
+            <div class="about-right">
+                <div class="about-block">
+                    <h2>Skills</h2>
+                    <div class="skills-tags">
+                        <span>Azure AI</span>
+                        <span>Generative AI</span>
+                        <span>LLM Ops</span>
+                        <span>RAG Pipelines</span>
+                        <span>Computer Vision</span>
+                        <span>SCADA/OT</span>
+                        <span>Power BI</span>
+                        <span>Python</span>
+                        <span>Databricks</span>
+                        <span>Digital Twins</span>
+                        <span>Predictive Maintenance</span>
+                        <span>MLOps</span>
+                    </div>
                 </div>
-            </section>
 
-            <!-- Experience -->
-            <section class="about-card">
-                <h2>Experience</h2>
-                <div class="exp-row">
-                    <strong>Industrial AI Engineer</strong>
-                    <span>HuggingFace | 2024+</span>
+                <div class="about-block">
+                    <h2>Experience</h2>
+                    <div class="exp-item">
+                        <strong>Industrial AI Engineer</strong>
+                        <span>HuggingFace | 2024+</span>
+                    </div>
+                    <div class="exp-item">
+                        <strong>Product Engineer</strong>
+                        <span>Testmachine | 2022-24</span>
+                    </div>
                 </div>
-                <div class="exp-row">
-                    <strong>Product Engineer</strong>
-                    <span>Testmachine | 2022-24</span>
-                </div>
-            </section>
 
-            <!-- Education -->
-            <section class="about-card">
-                <h2>Education</h2>
-                <div class="exp-row">
-                    <strong>MS in AI</strong>
-                    <span>CU Boulder | 2026</span>
+                <div class="about-block">
+                    <h2>Education</h2>
+                    <div class="exp-item">
+                        <strong>MS in AI</strong>
+                        <span>CU Boulder | 2026</span>
+                    </div>
+                    <div class="exp-item">
+                        <strong>Azure AI Engineer</strong>
+                        <span>Microsoft | 2026</span>
+                    </div>
                 </div>
-                <div class="exp-row">
-                    <strong>Azure AI Engineer</strong>
-                    <span>Microsoft | 2026</span>
-                </div>
-            </section>
 
-            <!-- Contributions -->
-            <section class="about-card">
-                <h2>Open Source Contributions</h2>
-                <div class="tag-list-sm">
-                    <span>Microsoft AutoGen</span>
-                    <span>LangChain</span>
-                    <span>LangGraph</span>
-                    <span>Unstructured.io</span>
-                    <span>DSPy</span>
-                    <span>HuggingFace</span>
+                <div class="about-block">
+                    <h2>Open Source Contributions</h2>
+                    <div class="contributions">
+                        <span>Microsoft AutoGen</span>
+                        <span>LangChain</span>
+                        <span>LangGraph</span>
+                        <span>Unstructured.io</span>
+                        <span>DSPy</span>
+                        <span>HuggingFace</span>
+                    </div>
                 </div>
-            </section>
+            </div>
         </div>
     </main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="js/animation.js"></script>
     <script>
-        // Initialize 3D neural network
-        document.addEventListener('DOMContentLoaded', () => {
-        });
-
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
