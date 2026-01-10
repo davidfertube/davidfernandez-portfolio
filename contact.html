@@ -36,6 +36,7 @@
     <!-- Main Content -->
     <main>
         <div class="contact-container fade-in">
+            <div class="contact-canvas" id="contactCanvas"></div>
             <h1>Get in Touch</h1>
 
             <div class="contact-links">
@@ -50,7 +51,17 @@
         </div>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/animation.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new AnimatedSphere('#contactCanvas', {
+                color: 0x4f46e5,
+                rotationSpeed: 0.002,
+                radius: 1.5
+            });
+        });
+
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
