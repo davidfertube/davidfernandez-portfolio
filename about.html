@@ -35,30 +35,26 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="about-page">
-        <div class="about-layout">
+    <main class="about-page-full">
+        <div class="about-full-layout">
             <!-- Left: Photo + Info -->
-            <div class="about-sidebar">
-                <div class="about-canvas" id="aboutCanvas"></div>
-                <img src="assets/photo.jpg" alt="David Fernandez" class="about-photo-compact">
+            <div class="about-left">
+                <img src="assets/photo.jpg" alt="David Fernandez" class="about-photo-large">
                 <h1>David Fernandez</h1>
                 <p class="subtitle">AI Solutions Engineer</p>
                 <p class="location">Katy, TX</p>
+
+                <div class="about-summary">
+                    AI Solutions Engineer building production-grade intelligent systems for energy and enterprise.
+                    I design Agentic AI workflows, RAG pipelines, and computer vision solutions.
+                </div>
             </div>
 
-            <!-- Right: Content -->
-            <div class="about-content">
-                <section class="about-section-compact">
-                    <p>
-                        AI Solutions Engineer building production-grade intelligent systems for energy and enterprise.
-                        I design Agentic AI workflows, RAG pipelines, and computer vision solutions that integrate
-                        with existing operational infrastructure.
-                    </p>
-                </section>
-
-                <section class="about-section-compact">
+            <!-- Right: Skills, Experience, Education -->
+            <div class="about-right">
+                <section class="about-block">
                     <h2>Skills</h2>
-                    <div class="skills-inline">
+                    <div class="skills-tags">
                         <span>Gemini</span>
                         <span>Azure OpenAI</span>
                         <span>LangGraph</span>
@@ -68,26 +64,42 @@
                         <span>Next.js</span>
                         <span>Docker</span>
                         <span>Kubernetes</span>
+                        <span>SCADA</span>
+                        <span>OSDU</span>
                     </div>
                 </section>
 
-                <section class="about-section-compact">
+                <section class="about-block">
                     <h2>Experience</h2>
-                    <div class="experience-compact">
-                        <strong>Industrial AI Solutions Engineer</strong> | HuggingFace (Open Source) | 2024 - Present
+                    <div class="exp-item">
+                        <strong>Industrial AI Solutions Engineer</strong>
+                        <span>HuggingFace (Open Source) | 2024 - Present</span>
                     </div>
-                    <div class="experience-compact">
-                        <strong>Product Engineer</strong> | Testmachine Inc | 2022 - 2024
+                    <div class="exp-item">
+                        <strong>Product Engineer</strong>
+                        <span>Testmachine Inc | 2022 - 2024</span>
                     </div>
                 </section>
 
-                <section class="about-section-compact">
+                <section class="about-block">
                     <h2>Education</h2>
-                    <div class="experience-compact">
-                        <strong>MS in AI</strong> | University of Colorado Boulder | 2026
+                    <div class="exp-item">
+                        <strong>MS in Artificial Intelligence</strong>
+                        <span>University of Colorado Boulder | Expected 2026</span>
                     </div>
-                    <div class="experience-compact">
-                        <strong>Azure AI Engineer Associate</strong> | Microsoft Certified | 2026
+                    <div class="exp-item">
+                        <strong>Azure AI Engineer Associate</strong>
+                        <span>Microsoft Certified | 2026</span>
+                    </div>
+                </section>
+
+                <section class="about-block">
+                    <h2>Open Source Contributions</h2>
+                    <div class="contributions">
+                        <span>Microsoft AutoGen</span>
+                        <span>LangChain/LangGraph</span>
+                        <span>Unstructured.io</span>
+                        <span>DSPy (Stanford)</span>
                     </div>
                 </section>
             </div>
@@ -109,17 +121,6 @@
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="js/animation.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            new AnimatedSphere('#aboutCanvas', {
-                color: 0x1a1a1a,
-                rotationSpeed: 0.0015,
-                radius: 1
-            });
-        });
     </script>
 </body>
 
