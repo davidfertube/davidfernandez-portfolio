@@ -374,6 +374,26 @@ main {
   padding: 0.25rem 0;
 }
 
+/* Portfolio Canvas */
+.portfolio-canvas {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  margin: 0 auto var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .portfolio-canvas {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-canvas {
+    height: 180px;
+  }
+}
+
 /* Portfolio Grid */
 .portfolio-grid {
   display: grid;

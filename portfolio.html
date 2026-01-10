@@ -38,8 +38,9 @@
     <main>
         <div class="container">
             <header class="text-center fade-in">
+                <div class="portfolio-canvas" id="portfolioCanvas"></div>
                 <h1>Portfolio</h1>
-                <p>6 production-ready AI projects for the Energy Corridor</p>
+                <p>Production-ready AI projects for energy and enterprise</p>
             </header>
 
             <div class="portfolio-grid">
@@ -103,6 +104,16 @@
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new DataCube('#portfolioCanvas', {
+                cubeCount: 6,
+                rotationSpeed: 0.003
+            });
+        });
     </script>
 </body>
 

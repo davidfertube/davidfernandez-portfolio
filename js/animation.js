@@ -274,3 +274,128 @@ class NeuralNetwork {
 }
 
 window.NeuralNetwork = NeuralNetwork;
+
+/**
+ * Data Cube 3D Animation - Portfolio visualization
+ * Floating rotating cubes representing projects/data
+ */
+class DataCube {
+  constructor(container, options = {}) {
+    this.container = typeof container === 'string'
+      ? document.querySelector(container)
+      : container;
+
+    if (!this.container) return;
+
+    this.options = {
+      cubeCount: options.cubeCount || 6,
+      cubeColor: options.cubeColor || 0x4f46e5,
+      rotationSpeed: options.rotationSpeed || 0.005,
+      ...options
+    };
+
+    this.cubes = [];
+
+    this.init();
+  }
+
+  init() {
+    this.scene = new THREE.Scene();
+
+    const aspect = this.container.clientWidth / this.container.clientHeight;
+    this.camera = new THREE.PerspectiveCamera(50, aspect, 0.1, 1000);
+    this.camera.position.z = 6;
+
+    this.renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true
+    });
+    this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this.container.appendChild(this.renderer.domElement);
+
+    this.createCubes();
+
+    window.addEventListener('resize', () => this.onResize());
+
+    this.animate();
+  }
+
+  createCubes() {
+    const colors = [0x4f46e5, 0x8b5cf6, 0x06b6d4, 0x10b981, 0xf59e0b, 0xef4444];
+
+    for (let i = 0; i < this.options.cubeCount; i++) {
+      const size = 0.3 + Math.random() * 0.4;
+      const geometry = new THREE.BoxGeometry(size, size, size);
+      const material = new THREE.MeshBasicMaterial({
+        color: colors[i % colors.length],
+        wireframe: true,
+        transparent: true,
+        opacity: 0.7
+      });
+
+      const cube = new THREE.Mesh(geometry, material);
+
+      // Position in a circular pattern
+      const angle = (i / this.options.cubeCount) * Math.PI * 2;
+      const radius = 1.5 + Math.random() * 0.5;
+      cube.position.x = Math.cos(angle) * radius;
+      cube.position.y = (Math.random() - 0.5) * 2;
+      cube.position.z = Math.sin(angle) * radius;
+
+      cube.userData.rotationSpeed = {
+        x: (Math.random() - 0.5) * 0.02,
+        y: (Math.random() - 0.5) * 0.02
+      };
+      cube.userData.floatOffset = Math.random() * Math.PI * 2;
+
+      this.cubes.push(cube);
+      this.scene.add(cube);
+    }
+
+    // Add central larger cube
+    const centerGeometry = new THREE.IcosahedronGeometry(0.6, 1);
+    const centerMaterial = new THREE.MeshBasicMaterial({
+      color: 0x1a1a1a,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.8
+    });
+    this.centerCube = new THREE.Mesh(centerGeometry, centerMaterial);
+    this.scene.add(this.centerCube);
+  }
+
+  onResize() {
+    const width = this.container.clientWidth;
+    const height = this.container.clientHeight;
+    this.camera.aspect = width / height;
+    this.camera.updateProjectionMatrix();
+    this.renderer.setSize(width, height);
+  }
+
+  animate() {
+    requestAnimationFrame(() => this.animate());
+
+    const time = Date.now() * 0.001;
+
+    // Animate cubes
+    this.cubes.forEach((cube, i) => {
+      cube.rotation.x += cube.userData.rotationSpeed.x;
+      cube.rotation.y += cube.userData.rotationSpeed.y;
+
+      // Floating motion
+      cube.position.y += Math.sin(time + cube.userData.floatOffset) * 0.002;
+    });
+
+    // Rotate center
+    this.centerCube.rotation.x += 0.003;
+    this.centerCube.rotation.y += 0.005;
+
+    // Rotate entire scene slowly
+    this.scene.rotation.y += this.options.rotationSpeed;
+
+    this.renderer.render(this.scene, this.camera);
+  }
+}
+
+window.DataCube = DataCube;
