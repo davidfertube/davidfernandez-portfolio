@@ -266,6 +266,21 @@ main {
   color: var(--color-accent);
 }
 
+/* Minimal hero for homepage - just 3D and title */
+.hero-minimal {
+  padding: 0;
+}
+
+.hero-minimal .hero-canvas {
+  height: 500px;
+  max-width: 700px;
+}
+
+.hero-minimal h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
   .hero-canvas {
     height: 300px;
@@ -273,6 +288,28 @@ main {
 
   .hero h1 {
     font-size: 1.25rem;
+  }
+
+  .hero-minimal .hero-canvas {
+    height: 350px;
+  }
+
+  .hero-minimal h1 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-canvas {
+    height: 250px;
+  }
+
+  .hero-minimal .hero-canvas {
+    height: 280px;
+  }
+
+  .hero-minimal h1 {
+    font-size: 1.1rem;
   }
 }
 
@@ -473,14 +510,21 @@ main {
 /* Contact Page */
 .contact-canvas {
   width: 100%;
-  max-width: 400px;
-  height: 300px;
+  max-width: 600px;
+  height: 450px;
   margin-bottom: var(--space-md);
 }
 
 @media (max-width: 768px) {
   .contact-canvas {
-    height: 200px;
+    height: 350px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-canvas {
+    height: 280px;
   }
 }
 

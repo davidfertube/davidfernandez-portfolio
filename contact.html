@@ -60,12 +60,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/animation.js"></script>
     <script>
-        // Initialize 3D animation for contact page
+        // Initialize Neural Network 3D animation for contact page
         document.addEventListener('DOMContentLoaded', () => {
-            new AnimatedSphere('#contactCanvas', {
-                color: 0x4f46e5,
-                rotationSpeed: 0.0015,
-                radius: 1.2
+            new NeuralNetwork('#contactCanvas', {
+                nodeCount: 60,
+                connectionDistance: 1.8,
+                nodeColor: 0x4f46e5,
+                lineColor: 0x8b5cf6,
+                rotationSpeed: 0.001
             });
         });
 
