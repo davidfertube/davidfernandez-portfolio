@@ -510,8 +510,8 @@ main {
 /* Contact Page */
 .contact-canvas {
   width: 100%;
-  max-width: 600px;
-  height: 450px;
+  max-width: 550px;
+  height: 380px;
   margin-bottom: var(--space-md);
 }
 
