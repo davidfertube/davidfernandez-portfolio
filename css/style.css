@@ -921,6 +921,7 @@ main {
 }
 
 /* Contact Page */
+/* Contact Page */
 .contact-canvas {
   width: 100%;
   max-width: 550px;
@@ -1293,7 +1294,7 @@ main {
   .open-source-card {
     grid-column: span 2;
   }
-  
+
   .contrib-list {
     grid-template-columns: 1fr;
   }

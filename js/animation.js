@@ -24,7 +24,7 @@ class AnimatedSphere {
     this.mouse = { x: 0, y: 0 };
     this.targetRotation = { x: 0, y: 0 };
 
-    this.init();
+    // Skipping synchronous init to allow async init flow
   }
 
   init() {
@@ -150,7 +150,7 @@ class NeuralNetwork {
     this.nodes = [];
     this.lines = [];
 
-    this.init();
+    // Skipping synchronous init to allow async init flow
   }
 
   init() {
@@ -296,7 +296,7 @@ class DataCube {
 
     this.cubes = [];
 
-    this.init();
+    // Skipping synchronous init to allow async init flow
   }
 
   init() {
@@ -399,3 +399,149 @@ class DataCube {
 }
 
 window.DataCube = DataCube;
+
+/**
+ * 3D Human Face Animation - Interactive 3D visualization
+ */
+class FaceAnimation {
+  constructor(container, options = {}) {
+    this.container = typeof container === 'string'
+      ? document.querySelector(container)
+      : container;
+
+    if (!this.container) return;
+
+    this.options = {
+      texturePath: options.texturePath || 'assets/face-texture.png',
+      mouseInfluence: options.mouseInfluence || 0.3,
+      rotationSpeed: options.rotationSpeed || 0.002,
+      ...options
+    };
+
+    this.mouse = { x: 0, y: 0 };
+    this.targetRotation = { x: 0, y: 0 };
+    this.currentRotation = { x: 0, y: 0 };
+    this.init();
+  }
+
+  async init() {
+    // Scene
+    this.scene = new THREE.Scene();
+
+    // Camera
+    const aspect = this.container.clientWidth / this.container.clientHeight;
+    this.camera = new THREE.PerspectiveCamera(45, aspect, 0.1, 1000);
+    this.camera.position.z = 5;
+
+    // Renderer
+    this.renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true
+    });
+    this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    this.container.appendChild(this.renderer.domElement);
+
+    // Lights
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+    this.scene.add(ambientLight);
+
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(5, 5, 5);
+    this.scene.add(directionalLight);
+
+    // Create Face Plane with Texture
+    await this.createFace();
+
+    // Events
+    window.addEventListener('resize', () => this.onResize());
+    window.addEventListener('mousemove', (e) => this.onMouseMove(e));
+
+    // Start animation
+    this.animate();
+  }
+
+  createFace() {
+    return new Promise((resolve, reject) => {
+      const loader = new THREE.TextureLoader();
+
+      // Attempt to load the texture
+      loader.load(
+        this.options.texturePath,
+        (texture) => {
+          // Increase segments for a smoother look or displacement
+          const geometry = new THREE.PlaneGeometry(3.5, 3.5, 64, 64);
+          const material = new THREE.MeshPhongMaterial({
+            map: texture,
+            transparent: true,
+            side: THREE.FrontSide,
+            shininess: 30,
+            specular: 0x222222
+          });
+
+          this.face = new THREE.Mesh(geometry, material);
+          this.scene.add(this.face);
+          console.log("3D Face Texture loaded successfully.");
+          resolve();
+        },
+        undefined, // onProgress
+        (err) => {
+          console.error("Error loading 3D Face Texture:", err);
+          console.warn("If you are running this locally via file://, textures may be blocked. Try a local server (e.g., npx serve .)");
+
+          // Fallback: Create a visible mesh so the user knows where it should be
+          const geometry = new THREE.PlaneGeometry(3.5, 3.5);
+          const material = new THREE.MeshBasicMaterial({
+            color: 0xeeeeee,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.1
+          });
+          this.face = new THREE.Mesh(geometry, material);
+          this.scene.add(this.face);
+          resolve();
+        }
+      );
+    });
+  }
+
+  onResize() {
+    const width = this.container.clientWidth;
+    const height = this.container.clientHeight;
+
+    this.camera.aspect = width / height;
+    this.camera.updateProjectionMatrix();
+    this.renderer.setSize(width, height);
+  }
+
+  onMouseMove(event) {
+    // Normalized mouse coordinates (-1 to 1)
+    this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+  }
+
+  animate() {
+    requestAnimationFrame(() => this.animate());
+
+    if (this.face) {
+      // Calculate target rotation based on mouse
+      this.targetRotation.y = this.mouse.x * this.options.mouseInfluence;
+      this.targetRotation.x = -this.mouse.y * this.options.mouseInfluence;
+
+      // Smoothly interpolate towards target rotation (lerp)
+      this.currentRotation.x += (this.targetRotation.x - this.currentRotation.x) * 0.05;
+      this.currentRotation.y += (this.targetRotation.y - this.currentRotation.y) * 0.05;
+
+      this.face.rotation.x = this.currentRotation.x;
+      this.face.rotation.y = this.currentRotation.y;
+
+      // Add a tiny bit of continuous auto-rotation or "breathing"
+      const time = Date.now() * 0.001;
+      this.face.position.y = Math.sin(time) * 0.05;
+    }
+
+    this.renderer.render(this.scene, this.camera);
+  }
+}
+
+window.FaceAnimation = FaceAnimation;

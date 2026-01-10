@@ -36,7 +36,7 @@
     <!-- Main Content -->
     <main>
         <div class="contact-container fade-in">
-            <div class="contact-canvas" id="contactCanvas"></div>
+            <div class="contact-canvas" id="faceCanvas"></div>
             <h1>Get in Touch</h1>
 
             <div class="contact-links">
@@ -55,12 +55,9 @@
     <script src="js/animation.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            new NeuralNetwork('#contactCanvas', {
-                nodeCount: 60,
-                connectionDistance: 2.2,
-                nodeColor: 0x4f46e5,
-                lineColor: 0x8b5cf6,
-                rotationSpeed: 0.0008
+            new FaceAnimation('#faceCanvas', {
+                texturePath: 'assets/face-texture.png',
+                mouseInfluence: 0.4
             });
         });
 

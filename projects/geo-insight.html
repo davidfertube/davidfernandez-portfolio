@@ -92,10 +92,21 @@
         </div>
     </main>
 
+    <div class="hero hero-minimal" style="min-height: auto; margin-top: -20px; margin-bottom: 20px;">
+        <div class="hero-canvas" id="cubeCanvas" style="height: 200px; max-width: 400px; margin: 0 auto;"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../js/animation.js"></script>
     <script>
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
+        document.addEventListener("DOMContentLoaded", () => {
+            new DataCube("#cubeCanvas", {
+                cubeCount: 4,
+                rotationSpeed: 0.003
+            });
+        });
     </script>
 </body>
 

@@ -38,6 +38,10 @@
     <main class="page-centered">
         <div class="content-card">
             <div class="card-header">
+                <div class="hero hero-minimal" style="min-height: auto;">
+                    <div class="hero-canvas" id="heroCanvas" style="height: 300px; max-width: 500px; margin: 0 auto;">
+                    </div>
+                </div>
                 <h1>Portfolio</h1>
                 <p class="role">Production-ready AI projects for energy and enterprise</p>
             </div>
@@ -82,7 +86,17 @@
         </div>
     </main>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/animation.js"></script>
     <script>
+        // Initialize 3D animation
+        document.addEventListener('DOMContentLoaded', () => {
+            new AnimatedSphere('#heroCanvas', {
+                color: 0x1a1a1a,
+                rotationSpeed: 0.002
+            });
+        });
+
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
