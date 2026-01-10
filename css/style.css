@@ -254,6 +254,18 @@ main {
   color: var(--color-text-light);
 }
 
+.hero-email {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hero-email:hover {
+  color: var(--color-accent);
+}
+
 @media (max-width: 768px) {
   .hero-canvas {
     height: 300px;
