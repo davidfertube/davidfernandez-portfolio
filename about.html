@@ -35,26 +35,27 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="about-page-full">
-        <div class="about-full-layout">
-            <!-- Left: Photo + Info -->
-            <div class="about-left">
-                <img src="assets/photo.jpg" alt="David Fernandez" class="about-photo-large">
+    <main class="page-centered">
+        <div class="content-card">
+            <!-- Header -->
+            <div class="card-header">
+                <img src="assets/photo.jpg" alt="David Fernandez" class="profile-photo">
                 <h1>David Fernandez</h1>
-                <p class="subtitle">AI Solutions Engineer</p>
-                <p class="location">Katy, TX</p>
-
-                <div class="about-summary">
-                    AI Solutions Engineer building production-grade intelligent systems for energy and enterprise.
-                    I design Agentic AI workflows, RAG pipelines, and computer vision solutions.
-                </div>
+                <p class="role">AI Solutions Engineer</p>
+                <p class="location-text">Katy, TX</p>
             </div>
 
-            <!-- Right: Skills, Experience, Education -->
-            <div class="about-right">
-                <section class="about-block">
+            <!-- Summary -->
+            <div class="card-summary">
+                AI Solutions Engineer building production-grade intelligent systems for energy and enterprise.
+                I design Agentic AI workflows, RAG pipelines, and computer vision solutions.
+            </div>
+
+            <!-- Sections Grid -->
+            <div class="sections-grid">
+                <section class="info-card">
                     <h2>Skills</h2>
-                    <div class="skills-tags">
+                    <div class="tag-list">
                         <span>Gemini</span>
                         <span>Azure OpenAI</span>
                         <span>LangGraph</span>
@@ -64,58 +65,57 @@
                         <span>Next.js</span>
                         <span>Docker</span>
                         <span>Kubernetes</span>
-                        <span>SCADA</span>
-                        <span>OSDU</span>
                     </div>
                 </section>
 
-                <section class="about-block">
+                <section class="info-card">
                     <h2>Experience</h2>
-                    <div class="exp-item">
+                    <div class="info-item">
                         <strong>Industrial AI Solutions Engineer</strong>
                         <span>HuggingFace (Open Source) | 2024 - Present</span>
                     </div>
-                    <div class="exp-item">
+                    <div class="info-item">
                         <strong>Product Engineer</strong>
                         <span>Testmachine Inc | 2022 - 2024</span>
                     </div>
                 </section>
 
-                <section class="about-block">
+                <section class="info-card">
                     <h2>Education</h2>
-                    <div class="exp-item">
+                    <div class="info-item">
                         <strong>MS in Artificial Intelligence</strong>
-                        <span>University of Colorado Boulder | Expected 2026</span>
+                        <span>University of Colorado Boulder | 2026</span>
                     </div>
-                    <div class="exp-item">
+                    <div class="info-item">
                         <strong>Azure AI Engineer Associate</strong>
                         <span>Microsoft Certified | 2026</span>
                     </div>
                 </section>
 
-                <section class="about-block">
-                    <h2>Open Source Contributions</h2>
-                    <div class="contributions">
+                <section class="info-card">
+                    <h2>Contributions</h2>
+                    <div class="tag-list">
                         <span>Microsoft AutoGen</span>
-                        <span>LangChain/LangGraph</span>
+                        <span>LangChain</span>
                         <span>Unstructured.io</span>
-                        <span>DSPy (Stanford)</span>
+                        <span>DSPy</span>
                     </div>
                 </section>
             </div>
+
+            <!-- Social Links -->
+            <section class="info-card social-card">
+                <h2>Connect</h2>
+                <div class="social-links">
+                    <a href="mailto:davidfertube@gmail.com">Email</a>
+                    <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://huggingface.co/davidfertube" target="_blank" rel="noopener">HuggingFace</a>
+                </div>
+            </section>
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="mailto:davidfertube@gmail.com">Email</a>
-            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
-            <a href="https://huggingface.co/davidfertube" target="_blank" rel="noopener">HuggingFace</a>
-        </div>
-    </footer>
 
     <script>
         function toggleNav() {

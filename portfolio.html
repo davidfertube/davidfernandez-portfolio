@@ -35,59 +35,63 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="portfolio-page-full">
-        <h1>Portfolio</h1>
-        <p class="portfolio-subtitle">Production-ready AI projects for energy and enterprise</p>
+    <main class="page-centered">
+        <div class="content-card">
+            <div class="card-header">
+                <h1>Portfolio</h1>
+                <p class="role">Production-ready AI projects for energy and enterprise</p>
+            </div>
 
-        <div class="portfolio-grid-full">
-            <a href="projects/geo-insight.html" class="project-card-full">
-                <h3>Geo-Insight HSE</h3>
-                <p>Real-time PPE detection for HSE compliance using computer vision deployed at the edge.</p>
-                <span class="tech-stack">YOLOv8 • Azure Container Apps</span>
-            </a>
+            <div class="projects-grid">
+                <a href="projects/geo-insight.html" class="project-card-themed">
+                    <h3>Geo-Insight HSE</h3>
+                    <p>Real-time PPE detection for HSE compliance using computer vision.</p>
+                    <span class="tech">YOLOv8 • Azure Container Apps</span>
+                </a>
 
-            <a href="projects/predictive-maintenance.html" class="project-card-full">
-                <h3>Predictive Maintenance</h3>
-                <p>Equipment failure prediction dashboard using LSTM neural networks on NASA turbofan data.</p>
-                <span class="tech-stack">LSTM • NASA Dataset • Grafana</span>
-            </a>
+                <a href="projects/predictive-maintenance.html" class="project-card-themed">
+                    <h3>Predictive Maintenance</h3>
+                    <p>Equipment failure prediction using LSTM neural networks.</p>
+                    <span class="tech">LSTM • NASA Dataset • Grafana</span>
+                </a>
 
-            <a href="projects/chat-with-assets.html" class="project-card-full">
-                <h3>Chat-with-Assets RAG</h3>
-                <p>Enterprise RAG pipeline enabling operators to query 500+ pages of technical manuals.</p>
-                <span class="tech-stack">Azure AI Search • Next.js</span>
-            </a>
+                <a href="projects/chat-with-assets.html" class="project-card-themed">
+                    <h3>Chat-with-Assets RAG</h3>
+                    <p>Enterprise RAG pipeline for technical documentation.</p>
+                    <span class="tech">Azure AI Search • Next.js</span>
+                </a>
 
-            <a href="projects/legal-eagle.html" class="project-card-full">
-                <h3>Legal-Eagle Agent</h3>
-                <p>Multi-agent system for autonomous MSA contract review with deep reasoning chains.</p>
-                <span class="tech-stack">LangGraph • Azure OpenAI • Gemini</span>
-            </a>
+                <a href="projects/legal-eagle.html" class="project-card-themed">
+                    <h3>Legal-Eagle Agent</h3>
+                    <p>Multi-agent system for contract review and analysis.</p>
+                    <span class="tech">LangGraph • Azure OpenAI • Gemini</span>
+                </a>
 
-            <a href="projects/policy-guard.html" class="project-card-full">
-                <h3>Policy-Guard Compliance</h3>
-                <p>Policy-as-Code compliance engine validating outputs against regulatory rules.</p>
-                <span class="tech-stack">DSPy • Web Demo</span>
-            </a>
+                <a href="projects/policy-guard.html" class="project-card-themed">
+                    <h3>Policy-Guard Compliance</h3>
+                    <p>Policy-as-Code engine for regulatory compliance.</p>
+                    <span class="tech">DSPy • Web Demo</span>
+                </a>
 
-            <a href="projects/rl-supply-chain.html" class="project-card-full">
-                <h3>RL Supply Chain</h3>
-                <p>Reinforcement learning optimization for supply chain logistics and edge-case testing.</p>
-                <span class="tech-stack">Stable Baselines3 • Azure ML</span>
-            </a>
+                <a href="projects/rl-supply-chain.html" class="project-card-themed">
+                    <h3>RL Supply Chain</h3>
+                    <p>Reinforcement learning for supply chain optimization.</p>
+                    <span class="tech">Stable Baselines3 • Azure ML</span>
+                </a>
+            </div>
+
+            <!-- Social Links -->
+            <section class="info-card social-card">
+                <div class="social-links">
+                    <a href="mailto:davidfertube@gmail.com">Email</a>
+                    <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://huggingface.co/davidfertube" target="_blank" rel="noopener">HuggingFace</a>
+                </div>
+            </section>
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="mailto:davidfertube@gmail.com">Email</a>
-            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
-            <a href="https://huggingface.co/davidfertube" target="_blank" rel="noopener">HuggingFace</a>
-        </div>
-    </footer>
 
     <script>
         function toggleNav() {
