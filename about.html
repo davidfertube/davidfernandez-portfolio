@@ -39,9 +39,6 @@
         <div class="about-grid">
             <!-- Left: Photo + Info -->
             <div class="about-profile">
-                <div class="hero hero-minimal" style="min-height: auto; margin-top: -40px;">
-                    <div class="hero-canvas" id="neuralCanvas" style="height: 250px; max-width: 400px; margin: 0 auto;">
-                    </div>
                 </div>
                 <img src="assets/photo.jpg" alt="David Fernandez" class="profile-photo-sm"
                     style="margin-top: -60px; position: relative; z-index: 10;">
@@ -117,13 +114,6 @@
     <script>
         // Initialize 3D neural network
         document.addEventListener('DOMContentLoaded', () => {
-            new NeuralNetwork('#neuralCanvas', {
-                nodeCount: 40,
-                connectionDistance: 1.5,
-                nodeColor: 0x4f46e5,
-                lineColor: 0x8b5cf6,
-                rotationSpeed: 0.001
-            });
         });
 
         function toggleNav() {

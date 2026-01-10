@@ -38,9 +38,6 @@
     <main class="page-centered">
         <div class="content-card">
             <div class="card-header">
-                <div class="hero hero-minimal" style="min-height: auto;">
-                    <div class="hero-canvas" id="heroCanvas" style="height: 300px; max-width: 500px; margin: 0 auto;">
-                    </div>
                 </div>
                 <h1>Portfolio</h1>
                 <p class="role">Production-ready AI projects for energy and enterprise</p>
@@ -91,10 +88,6 @@
     <script>
         // Initialize 3D animation
         document.addEventListener('DOMContentLoaded', () => {
-            new AnimatedSphere('#heroCanvas', {
-                color: 0x1a1a1a,
-                rotationSpeed: 0.002
-            });
         });
 
         function toggleNav() {
