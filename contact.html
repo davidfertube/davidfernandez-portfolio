@@ -53,21 +53,25 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2026 David Fernandez</p>
+        <div class="footer-links">
+            <a href="mailto:davidfertube@gmail.com">Email</a>
+            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
+            <a href="https://huggingface.co/davidfertube" target="_blank" rel="noopener">HuggingFace</a>
+        </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/animation.js"></script>
     <script>
-        // Initialize Neural Network 3D animation for contact page
+        // Use AnimatedSphere for consistent geometric shapes
         document.addEventListener('DOMContentLoaded', () => {
-            new NeuralNetwork('#contactCanvas', {
-                nodeCount: 60,
-                connectionDistance: 1.8,
-                nodeColor: 0x4f46e5,
-                lineColor: 0x8b5cf6,
-                rotationSpeed: 0.001
+            new AnimatedSphere('#contactCanvas', {
+                color: 0x4f46e5,
+                rotationSpeed: 0.002,
+                radius: 1.3
             });
         });
 

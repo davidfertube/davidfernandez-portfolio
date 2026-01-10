@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="About David Fernandez - Industrial AI Engineer specializing in the Energy Corridor with expertise in Azure, GenAI, and production-grade AI systems">
+        content="About David Fernandez - AI Solutions Engineer specializing in energy and enterprise with expertise in Azure, GenAI, and production-grade AI systems">
 
     <title>About | David Fernandez</title>
 
@@ -35,152 +35,91 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
-        <div class="container fade-in">
-            <!-- Header with Photo -->
-            <header class="about-header">
-                <img src="assets/photo.jpg" alt="David Fernandez" class="about-photo">
+    <main class="about-page">
+        <div class="about-layout">
+            <!-- Left: Photo + Info -->
+            <div class="about-sidebar">
+                <div class="about-canvas" id="aboutCanvas"></div>
+                <img src="assets/photo.jpg" alt="David Fernandez" class="about-photo-compact">
                 <h1>David Fernandez</h1>
-                <p class="subtitle">Industrial AI Solutions Engineer | Katy, TX</p>
-            </header>
+                <p class="subtitle">AI Solutions Engineer</p>
+                <p class="location">Katy, TX</p>
+            </div>
 
-            <!-- Summary -->
-            <section class="about-section">
-                <h2>Summary</h2>
-                <p>
-                    AI Solutions Engineer with a focus on building production-grade intelligent systems for
-                    energy and enterprise environments. I design and deploy Agentic AI workflows, RAG pipelines,
-                    and computer vision solutions that integrate with existing operational infrastructure.
-                </p>
-                <p>
-                    Experienced in bridging the gap between cutting-edge AI capabilities and real-world
-                    business requirements—from automated document processing and compliance monitoring to
-                    predictive maintenance and real-time safety systems. Currently pursuing an MS in AI
-                    at University of Colorado Boulder.
-                </p>
-            </section>
+            <!-- Right: Content -->
+            <div class="about-content">
+                <section class="about-section-compact">
+                    <p>
+                        AI Solutions Engineer building production-grade intelligent systems for energy and enterprise.
+                        I design Agentic AI workflows, RAG pipelines, and computer vision solutions that integrate
+                        with existing operational infrastructure.
+                    </p>
+                </section>
 
-            <!-- Experience -->
-            <section class="about-section">
-                <h2>Experience</h2>
-
-                <h3>Hugging Face (via Open Source)</h3>
-                <p><em>Industrial AI Solutions Engineer | May 2024 – Present | Katy, TX (Remote)</em></p>
-                <ul>
-                    <li>Architected "The Legal-Eagle" Agentic Workflow: Multi-agent system using LangGraph and Gemini
-                        Flash to autonomously audit MSA contracts, reducing manual review time by 30%</li>
-                    <li>Deployed "Geo-Insight" HSE Vision Pipeline: Real-time safety monitoring using YOLOv8 on Azure
-                        Edge, detecting PPE violations with 99% accuracy</li>
-                    <li>Engineered "Chat-with-Assets" system using Pinecone and Gemini 3 Flash, enabling field operators
-                        to query 500+ pages of technical drilling manuals with &lt;200ms latency</li>
-                </ul>
-
-                <h3 class="mt-md">Testmachine Inc | Industrial AI Focus</h3>
-                <p><em>Product Engineer | Oct 2022 – Mar 2024 | Ann Arbor, MI</em></p>
-                <ul>
-                    <li>Engineered Adversarial Agent Simulations: RL environment to stress-test business logic using
-                        autonomous agents, identifying 15+ critical edge-case failures</li>
-                    <li>Built "Policy-as-Code" Compliance Engine: Automated audit pipeline validating system outputs
-                        against regulatory rules, reducing manual compliance review time by 60%</li>
-                    <li>Deployed Automated Root-Cause Reporting: Self-healing CI/CD integration with LLM-generated PDF
-                        reports, cutting debugging cycles in half</li>
-                </ul>
-            </section>
-
-            <!-- Skills -->
-            <section class="about-section">
-                <h2>Technical Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>Industrial AI & GenAI</h3>
-                        <ul>
-                            <li>Google Gemini 3 (Multimodal)</li>
-                            <li>Azure OpenAI</li>
-                            <li>Agentic RAG (LangChain/LangGraph)</li>
-                            <li>Microsoft AutoGen</li>
-                            <li>Physics-Informed NN</li>
-                            <li>Computer Vision (YOLOv8/Edge AI)</li>
-                        </ul>
+                <section class="about-section-compact">
+                    <h2>Skills</h2>
+                    <div class="skills-inline">
+                        <span>Gemini</span>
+                        <span>Azure OpenAI</span>
+                        <span>LangGraph</span>
+                        <span>YOLOv8</span>
+                        <span>RAG</span>
+                        <span>FastAPI</span>
+                        <span>Next.js</span>
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
                     </div>
+                </section>
 
-                    <div class="skill-category">
-                        <h3>Energy Data Standards</h3>
-                        <ul>
-                            <li>OSDU Data Platform</li>
-                            <li>Energistics (WITSML/PRODML)</li>
-                            <li>SCADA/Historians (OSIsoft PI)</li>
-                            <li>Industrial IoT (MQTT/Modbus/OPC UA)</li>
-                        </ul>
+                <section class="about-section-compact">
+                    <h2>Experience</h2>
+                    <div class="experience-compact">
+                        <strong>Industrial AI Solutions Engineer</strong> | HuggingFace (Open Source) | 2024 - Present
                     </div>
-
-                    <div class="skill-category">
-                        <h3>Cloud & Infrastructure</h3>
-                        <ul>
-                            <li>Microsoft Azure (Functions, Arc, Synapse)</li>
-                            <li>Google Cloud (Vertex AI)</li>
-                            <li>Terraform (IaC)</li>
-                            <li>Docker, Kubernetes (AKS)</li>
-                        </ul>
+                    <div class="experience-compact">
+                        <strong>Product Engineer</strong> | Testmachine Inc | 2022 - 2024
                     </div>
+                </section>
 
-                    <div class="skill-category">
-                        <h3>Full Stack & Data</h3>
-                        <ul>
-                            <li>Python (FastAPI)</li>
-                            <li>TypeScript (Next.js/React)</li>
-                            <li>SQL (PostgreSQL)</li>
-                            <li>NoSQL (Cosmos DB)</li>
-                            <li>Vector Search (Pinecone)</li>
-                            <li>Time-Series Data</li>
-                        </ul>
+                <section class="about-section-compact">
+                    <h2>Education</h2>
+                    <div class="experience-compact">
+                        <strong>MS in AI</strong> | University of Colorado Boulder | 2026
                     </div>
-                </div>
-            </section>
-
-            <!-- Open Source Contributions -->
-            <section class="about-section">
-                <h2>Open Source Contributions</h2>
-                <ul>
-                    <li><strong>Microsoft AutoGen:</strong> Contributed "Human-in-the-Loop" state preservation logic for
-                        GroupChat managers</li>
-                    <li><strong>LangChain/LangGraph:</strong> Contributed documentation for enterprise approval
-                        workflows enabling complex "human-authorization" steps</li>
-                    <li><strong>Unstructured.io:</strong> Improved "Partition PDF" logic for multi-column layouts in
-                        legacy Oil & Gas technical reports</li>
-                    <li><strong>DSPy (Stanford NLP):</strong> Contributed a "Signature" optimizer for classifying
-                        engineering change requests (ECRs)</li>
-                </ul>
-            </section>
-
-            <!-- Education -->
-            <section class="about-section">
-                <h2>Education & Certifications</h2>
-                <ul>
-                    <li><strong>Microsoft Certified</strong> | Azure AI Engineer Associate (Jan 2026)</li>
-                    <li><strong>University of Colorado Boulder</strong> | Master of Science in Artificial Intelligence
-                        (Expected Dec 2026)</li>
-                    <li><strong>Lindenwood University in St Charles</strong> | Bachelor of Arts in Marketing (Dec 2017)
-                    </li>
-                </ul>
-            </section>
+                    <div class="experience-compact">
+                        <strong>Azure AI Engineer Associate</strong> | Microsoft Certified | 2026
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-links">
+            <a href="mailto:davidfertube@gmail.com">Email</a>
             <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
             <a href="https://huggingface.co/davidfertube" target="_blank" rel="noopener">HuggingFace</a>
         </div>
-        <p>© 2026 David Fernandez</p>
     </footer>
 
     <script>
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new AnimatedSphere('#aboutCanvas', {
+                color: 0x1a1a1a,
+                rotationSpeed: 0.0015,
+                radius: 1
+            });
+        });
     </script>
 </body>
 
