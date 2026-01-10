@@ -1,6 +1,6 @@
 # David Fernandez - Portfolio
 
-**Industrial AI Solutions Engineer | Azure, Gemini & Agentic RAG**
+**Industrial AI Engineer | Azure, Gemini & Agentic RAG**
 
 🔗 **Live Site**: [davidfernandez.dev](https://www.davidfernandez.dev)
 
@@ -21,7 +21,7 @@ Personal portfolio website showcasing 6 production-ready AI projects for the Ene
 
 - HTML, CSS, JavaScript
 - Three.js (3D animations)
-- Azure Static Web Apps
+- Vercel
 
 ## Contact
 

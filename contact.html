@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact David Fernandez - AI Solutions Engineer">
+    <meta name="description" content="Contact David Fernandez - Industrial AI Engineer">
 
     <title>Contact | David Fernandez</title>
 
@@ -55,10 +55,12 @@
     <script src="js/animation.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            new AnimatedSphere('#contactCanvas', {
-                color: 0x4f46e5,
-                rotationSpeed: 0.002,
-                radius: 1.5
+            new NeuralNetwork('#contactCanvas', {
+                nodeCount: 60,
+                connectionDistance: 2.2,
+                nodeColor: 0x4f46e5,
+                lineColor: 0x8b5cf6,
+                rotationSpeed: 0.0008
             });
         });
 

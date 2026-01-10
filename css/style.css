@@ -1196,6 +1196,115 @@ main {
   }
 }
 
+/* About Page - Larger Font Sizes for Better Readability */
+.about-compact {
+  padding: var(--space-lg);
+}
+
+.about-grid {
+  max-width: 1300px;
+  gap: var(--space-lg);
+}
+
+.profile-photo-sm {
+  width: 140px;
+  height: 140px;
+  margin-bottom: var(--space-md);
+}
+
+.about-profile h1 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-sm);
+}
+
+.role-sm {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.location-sm {
+  font-size: 1.15rem;
+  margin-bottom: var(--space-md);
+}
+
+.summary-sm {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.about-card {
+  padding: var(--space-lg);
+}
+
+.about-card h2 {
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.tag-list-sm span {
+  font-size: 0.85rem;
+  padding: 0.45rem 0.75rem;
+}
+
+.exp-row strong {
+  font-size: 1.1rem;
+}
+
+.exp-row span {
+  font-size: 1rem;
+}
+
+/* Open Source Contributions Card - Expanded Layout */
+.open-source-card {
+  grid-column: span 2;
+}
+
+.contrib-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.contrib-item {
+  background: rgba(79, 70, 229, 0.03);
+  border-radius: 8px;
+  padding: var(--space-sm) var(--space-md);
+  border-left: 3px solid var(--color-accent);
+}
+
+.contrib-item strong {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.4rem;
+}
+
+.contrib-item p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .open-source-card {
+    grid-column: span 2;
+  }
+  
+  .contrib-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .open-source-card {
+    grid-column: auto;
+  }
+}
+
 /* ===========================================
    COHESIVE THEME STYLES - All Pages
    =========================================== */

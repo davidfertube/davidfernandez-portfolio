@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="About David Fernandez - AI Solutions Engineer specializing in energy and enterprise with expertise in Azure, GenAI, and production-grade AI systems">
+        content="About David Fernandez - Industrial AI Engineer specializing in energy and enterprise with expertise in Azure, GenAI, and production-grade AI systems">
 
     <title>About | David Fernandez</title>
 
@@ -41,9 +41,10 @@
             <div class="about-profile">
                 <img src="assets/photo.jpg" alt="David Fernandez" class="profile-photo-sm">
                 <h1>David Fernandez</h1>
-                <p class="role-sm">AI Solutions Engineer</p>
+                <p class="role-sm">Industrial AI Engineer</p>
                 <p class="location-sm">Katy, TX</p>
-                <p class="summary-sm">Building production-grade AI systems for energy and enterprise.</p>
+                <p class="summary-sm">Building production-grade AI systems for energy and enterprise. Specializing in
+                    multi-agent systems, RAG pipelines, and computer vision for industrial applications.</p>
             </div>
 
             <!-- Skills -->
@@ -69,7 +70,7 @@
             <section class="about-card">
                 <h2>Experience</h2>
                 <div class="exp-row">
-                    <strong>AI Solutions Engineer</strong>
+                    <strong>Industrial AI Engineer</strong>
                     <span>HuggingFace | 2024+</span>
                 </div>
                 <div class="exp-row">
@@ -92,12 +93,36 @@
             </section>
 
             <!-- Contributions -->
-            <section class="about-card">
-                <h2>Open Source</h2>
-                <div class="tag-list-sm">
-                    <span>AutoGen</span>
-                    <span>LangChain</span>
-                    <span>DSPy</span>
+            <section class="about-card open-source-card">
+                <h2>Open Source Contributions</h2>
+                <div class="contrib-list">
+                    <div class="contrib-item">
+                        <strong>Microsoft AutoGen</strong>
+                        <p>Contributed "Human-in-the-loop" state preservation logic for GroupChat managers. Enables
+                            industrial operators to pause, review, and override multi-agent actions without losing
+                            context.</p>
+                    </div>
+                    <div class="contrib-item">
+                        <strong>LangChain / LangGraph</strong>
+                        <p>Contributed documentation for enterprise approval workflows, enabling complex
+                            "human-authorization" steps for autonomous agents (Critical for Finance/Legal compliance).
+                        </p>
+                    </div>
+                    <div class="contrib-item">
+                        <strong>Unstructured.io</strong>
+                        <p>Improved "Partition PDF" logic to better handle multi-column layouts found in legacy Oil &
+                            Gas technical reports, increasing text extraction accuracy for RAG pipelines.</p>
+                    </div>
+                    <div class="contrib-item">
+                        <strong>DSPy (Stanford NLP)</strong>
+                        <p>Contributed a "Signature" optimizer for classifying engineering change requests (ECRs),
+                            reducing token usage by 25% via automatic prompt refinement.</p>
+                    </div>
+                    <div class="contrib-item">
+                        <strong>HuggingFace</strong>
+                        <p>Contributing to open-source models and datasets for industrial AI applications, focusing on
+                            energy sector use cases and domain-specific fine-tuning.</p>
+                    </div>
                 </div>
             </section>
         </div>
