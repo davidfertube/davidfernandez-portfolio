@@ -35,129 +35,64 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="project-hero fade-in">
-            <div class="project-canvas" id="projectCanvas"></div>
-            <h1>Geo-Insight HSE</h1>
-            <p>Real-time PPE Detection for HSE Compliance</p>
+    <main class="project-page">
+        <div class="project-layout">
+            <!-- Left: Info -->
+            <div class="project-info">
+                <h1>Geo-Insight HSE</h1>
+                <p class="project-tagline">Real-time PPE Detection for HSE Compliance</p>
 
-            <div class="project-meta">
-                <span>YOLOv8</span>
-                <span>Azure Container Apps</span>
-                <span>Edge AI</span>
-                <span>Computer Vision</span>
-            </div>
-        </section>
+                <div class="project-tags">
+                    <span>YOLOv8</span>
+                    <span>Azure Container Apps</span>
+                    <span>Edge AI</span>
+                </div>
 
-        <!-- Content -->
-        <div class="project-content">
-            <!-- Problem -->
-            <section class="project-section">
-                <h2>The Problem</h2>
-                <p>
-                    Health, Safety, and Environment (HSE) is the #1 priority in energy operations.
-                    Manual PPE compliance monitoring is slow, inconsistent, and impossible to scale
-                    across large industrial sites. Safety violations often go undetected until
-                    incidents occur.
-                </p>
-            </section>
-
-            <!-- Solution -->
-            <section class="project-section">
-                <h2>The Solution</h2>
-                <p>
-                    Geo-Insight HSE is a real-time computer vision pipeline that automatically
-                    detects PPE violations (helmets, vests, safety glasses) using YOLOv8 deployed
-                    on Azure Edge devices. The system processes live camera feeds and sends
-                    instant alerts to supervisors.
-                </p>
-                <p>
-                    Built for air-gapped OT environments, the model runs locally on edge devices
-                    with sub-100ms latency, ensuring compliance even without internet connectivity.
-                </p>
-            </section>
-
-            <!-- Key Metrics -->
-            <section class="project-section">
-                <h2>Key Metrics</h2>
-                <div class="metrics-grid">
-                    <div class="metric">
-                        <div class="metric-value">99%</div>
-                        <div class="metric-label">Detection Accuracy</div>
+                <div class="project-metrics">
+                    <div class="metric-item">
+                        <span class="metric-num">99%</span>
+                        <span class="metric-label">Accuracy</span>
                     </div>
-                    <div class="metric">
-                        <div class="metric-value">&lt;100ms</div>
-                        <div class="metric-label">Inference Latency</div>
+                    <div class="metric-item">
+                        <span class="metric-num">&lt;100ms</span>
+                        <span class="metric-label">Latency</span>
                     </div>
-                    <div class="metric">
-                        <div class="metric-value">24/7</div>
-                        <div class="metric-label">Continuous Monitoring</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">45%</div>
-                        <div class="metric-label">Violation Reduction</div>
+                    <div class="metric-item">
+                        <span class="metric-num">24/7</span>
+                        <span class="metric-label">Monitoring</span>
                     </div>
                 </div>
-            </section>
 
-            <!-- Architecture -->
-            <section class="project-section">
-                <h2>Architecture</h2>
-                <ul>
-                    <li><strong>Model:</strong> YOLOv8 fine-tuned on industrial PPE dataset</li>
-                    <li><strong>Edge Runtime:</strong> ONNX optimized for Azure Stack Edge / Jetson Nano</li>
-                    <li><strong>Data Flow:</strong> Camera → Edge Device → OPC UA → SCADA/HMI</li>
-                    <li><strong>Alerts:</strong> Real-time notifications to supervisors via Teams/SMS</li>
-                    <li><strong>Compliance:</strong> Designed for Purdue Model Level 3 (air-gapped)</li>
-                </ul>
-            </section>
+                <div class="project-cta">
+                    <a href="https://github.com/davidfertube/geo-insight-hse" target="_blank" class="btn">GitHub</a>
+                    <a href="../portfolio.html" class="btn-secondary">← Back</a>
+                </div>
+            </div>
 
-            <!-- Technologies -->
-            <section class="project-section">
-                <h2>Technologies</h2>
-                <ul>
-                    <li>YOLOv8 (Ultralytics)</li>
-                    <li>Azure Container Apps / Azure Stack Edge</li>
-                    <li>ONNX Runtime</li>
-                    <li>Python (FastAPI)</li>
-                    <li>OPC UA Protocol</li>
-                    <li>Docker / Kubernetes</li>
-                </ul>
-            </section>
+            <!-- Right: Details -->
+            <div class="project-details">
+                <section class="detail-card">
+                    <h2>Problem</h2>
+                    <p>HSE is #1 priority in energy operations. Manual PPE monitoring is slow, inconsistent,
+                        and impossible to scale across large industrial sites.</p>
+                </section>
 
-            <!-- CTA -->
-            <section class="project-section text-center">
-                <a href="https://github.com/davidfertube/geo-insight-hse" target="_blank" rel="noopener" class="btn">
-                    View on GitHub
-                </a>
-                <a href="../portfolio.html" class="btn mt-sm" style="margin-left: 1rem;">
-                    ← Back to Portfolio
-                </a>
-            </section>
+                <section class="detail-card">
+                    <h2>Solution</h2>
+                    <p>Real-time computer vision pipeline using YOLOv8 on Azure Edge devices.
+                        Processes live camera feeds with sub-100ms latency for instant alerts.</p>
+                </section>
+
+                <section class="detail-card">
+                    <h2>Architecture</h2>
+                    <p>Camera → Edge Device → OPC UA → SCADA/HMI.
+                        ONNX optimized for air-gapped OT environments (Purdue Level 3).</p>
+                </section>
+            </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
-        </div>
-        <p>© 2026 David Fernandez</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="../js/project-animations.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            new ProjectAnimations.ParticleField('#projectCanvas', {
-                color: 0x10b981
-            });
-        });
-
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }

@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="RL Supply Chain - Reinforcement learning optimization for supply chain logistics using Stable Baselines3 and Azure ML">
+    <meta name="description" content="RL Supply Chain - Reinforcement learning for supply chain optimization">
 
     <title>RL Supply Chain | David Fernandez</title>
 
@@ -14,19 +13,14 @@
 </head>
 
 <body class="theme-rl-supply">
-    <!-- Navigation -->
     <nav class="nav">
         <a href="../index.html" class="nav-logo">
             <img src="../assets/photo.jpg" alt="David Fernandez">
             <span>David Fernandez</span>
         </a>
-
         <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
-
         <ul class="nav-links" id="navLinks">
             <li><a href="../about.html">About</a></li>
             <li><a href="../portfolio.html">Portfolio</a></li>
@@ -34,131 +28,62 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="project-hero fade-in">
-            <div class="project-canvas" id="projectCanvas"></div>
-            <h1>RL Supply Chain</h1>
-            <p>Reinforcement Learning for Supply Chain Optimization</p>
+    <main class="project-page">
+        <div class="project-layout">
+            <div class="project-info">
+                <h1>RL Supply Chain</h1>
+                <p class="project-tagline">Reinforcement Learning Optimization</p>
 
-            <div class="project-meta">
-                <span>Stable Baselines3</span>
-                <span>Azure ML</span>
-                <span>Gym Environment</span>
-                <span>Adversarial Testing</span>
-            </div>
-        </section>
+                <div class="project-tags">
+                    <span>Stable Baselines3</span>
+                    <span>Azure ML</span>
+                    <span>Gymnasium</span>
+                </div>
 
-        <!-- Content -->
-        <div class="project-content">
-            <!-- Problem -->
-            <section class="project-section">
-                <h2>The Problem</h2>
-                <p>
-                    Supply chain logistics in energy operations involve complex decision-making
-                    under uncertainty. Traditional optimization fails to handle unexpected disruptions,
-                    demand spikes, and edge cases. Before deploying AI decision systems, companies
-                    need to stress-test business logic against adversarial scenarios.
-                </p>
-            </section>
-
-            <!-- Solution -->
-            <section class="project-section">
-                <h2>The Solution</h2>
-                <p>
-                    This project implements a custom OpenAI Gym environment simulating energy
-                    sector supply chain operations. Autonomous RL agents learn to optimize
-                    inventory, routing, and scheduling while adversarial agents stress-test
-                    the system to identify edge-case failures.
-                </p>
-                <p>
-                    The dual-agent approach ensures production AI systems are robust before
-                    deployment, identifying 15+ critical failure modes in simulation.
-                </p>
-            </section>
-
-            <!-- Key Metrics -->
-            <section class="project-section">
-                <h2>Key Metrics</h2>
-                <div class="metrics-grid">
-                    <div class="metric">
-                        <div class="metric-value">15+</div>
-                        <div class="metric-label">Edge Cases Found</div>
+                <div class="project-metrics">
+                    <div class="metric-item">
+                        <span class="metric-num">15+</span>
+                        <span class="metric-label">Edge Cases</span>
                     </div>
-                    <div class="metric">
-                        <div class="metric-value">PPO</div>
-                        <div class="metric-label">RL Algorithm</div>
+                    <div class="metric-item">
+                        <span class="metric-num">PPO</span>
+                        <span class="metric-label">Algorithm</span>
                     </div>
-                    <div class="metric">
-                        <div class="metric-value">10K</div>
-                        <div class="metric-label">Training Episodes</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">Azure ML</div>
-                        <div class="metric-label">Training Platform</div>
+                    <div class="metric-item">
+                        <span class="metric-num">Sim</span>
+                        <span class="metric-label">Environment</span>
                     </div>
                 </div>
-            </section>
 
-            <!-- Architecture -->
-            <section class="project-section">
-                <h2>Architecture</h2>
-                <ul>
-                    <li><strong>Environment:</strong> Custom OpenAI Gym with supply chain simulation</li>
-                    <li><strong>Optimizer Agent:</strong> PPO algorithm for decision optimization</li>
-                    <li><strong>Adversarial Agent:</strong> Stress-tests by creating worst-case scenarios</li>
-                    <li><strong>State Space:</strong> Inventory levels, demand forecasts, transit times</li>
-                    <li><strong>Action Space:</strong> Order quantities, routing decisions, scheduling</li>
-                    <li><strong>Training:</strong> Azure ML compute clusters for distributed training</li>
-                </ul>
-            </section>
+                <div class="project-cta">
+                    <a href="https://github.com/davidfertube/rl-supply-chain" target="_blank" class="btn">GitHub</a>
+                    <a href="../portfolio.html" class="btn-secondary">← Back</a>
+                </div>
+            </div>
 
-            <!-- Technologies -->
-            <section class="project-section">
-                <h2>Technologies</h2>
-                <ul>
-                    <li>Stable Baselines3</li>
-                    <li>OpenAI Gym</li>
-                    <li>Azure Machine Learning</li>
-                    <li>Python (NumPy, Pandas)</li>
-                    <li>MLflow (experiment tracking)</li>
-                    <li>Docker</li>
-                </ul>
-            </section>
+            <div class="project-details">
+                <section class="detail-card">
+                    <h2>Problem</h2>
+                    <p>Supply chain logistics have complex interdependencies. Traditional optimization
+                        fails to adapt to disruptions and edge cases in real-time operations.</p>
+                </section>
 
-            <!-- CTA -->
-            <section class="project-section text-center">
-                <a href="https://github.com/davidfertube/rl-supply-chain" target="_blank" rel="noopener" class="btn">
-                    View on GitHub
-                </a>
-                <a href="../portfolio.html" class="btn mt-sm" style="margin-left: 1rem;">
-                    ← Back to Portfolio
-                </a>
-            </section>
+                <section class="detail-card">
+                    <h2>Solution</h2>
+                    <p>Adversarial RL environment using PPO to stress-test business logic. Autonomous
+                        agents discover edge cases that traditional testing misses.</p>
+                </section>
+
+                <section class="detail-card">
+                    <h2>Architecture</h2>
+                    <p>Gymnasium Environment → PPO Agent (Stable Baselines3) → Azure ML Training
+                        → Edge Case Discovery → Business Logic Hardening → Production Deployment.</p>
+                </section>
+            </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
-        </div>
-        <p>© 2026 David Fernandez</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="../js/project-animations.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            new ProjectAnimations.FlowPipeline('#projectCanvas', {
-                color: 0x06b6d4
-            });
-        });
-
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }

@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Policy-Guard Compliance - Policy-as-Code compliance engine validating system outputs against regulatory rules using DSPy">
+    <meta name="description" content="Policy-Guard Compliance - Policy-as-Code engine for regulatory compliance">
 
     <title>Policy-Guard Compliance | David Fernandez</title>
 
@@ -14,19 +13,14 @@
 </head>
 
 <body class="theme-policy-guard">
-    <!-- Navigation -->
     <nav class="nav">
         <a href="../index.html" class="nav-logo">
             <img src="../assets/photo.jpg" alt="David Fernandez">
             <span>David Fernandez</span>
         </a>
-
         <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
-
         <ul class="nav-links" id="navLinks">
             <li><a href="../about.html">About</a></li>
             <li><a href="../portfolio.html">Portfolio</a></li>
@@ -34,146 +28,62 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section class="project-hero fade-in">
-            <div class="project-canvas" id="projectCanvas"></div>
-            <h1>Policy-Guard Compliance</h1>
-            <p>Policy-as-Code Compliance Engine</p>
+    <main class="project-page">
+        <div class="project-layout">
+            <div class="project-info">
+                <h1>Policy-Guard</h1>
+                <p class="project-tagline">Policy-as-Code Compliance Engine</p>
 
-            <div class="project-meta">
-                <span>DSPy</span>
-                <span>Compliance</span>
-                <span>Zero-Trust</span>
-                <span>Web Demo</span>
-            </div>
-        </section>
+                <div class="project-tags">
+                    <span>DSPy</span>
+                    <span>LLM Validation</span>
+                    <span>Web Demo</span>
+                </div>
 
-        <!-- Content -->
-        <div class="project-content">
-            <!-- Problem -->
-            <section class="project-section">
-                <h2>The Problem</h2>
-                <p>
-                    Energy companies must comply with complex regulatory frameworks (OSHA, EPA,
-                    state regulations). Manual compliance reviews are time-consuming and error-prone.
-                    AI systems generating reports or recommendations need guardrails to ensure
-                    outputs don't violate regulatory constraints.
-                </p>
-            </section>
-
-            <!-- Solution -->
-            <section class="project-section">
-                <h2>The Solution</h2>
-                <p>
-                    Policy-Guard is an automated audit pipeline that validates AI system outputs
-                    against configurable regulatory rules defined as code. Using DSPy for structured
-                    prompting, the engine checks every output against "Zero-Trust" constraints
-                    before delivery.
-                </p>
-                <p>
-                    Policies are defined in human-readable YAML, making it easy for compliance
-                    teams to maintain rules without engineering support.
-                </p>
-            </section>
-
-            <!-- Key Metrics -->
-            <section class="project-section">
-                <h2>Key Metrics</h2>
-                <div class="metrics-grid">
-                    <div class="metric">
-                        <div class="metric-value">60%</div>
-                        <div class="metric-label">Review Time Reduction</div>
+                <div class="project-metrics">
+                    <div class="metric-item">
+                        <span class="metric-num">60%</span>
+                        <span class="metric-label">Time Saved</span>
                     </div>
-                    <div class="metric">
-                        <div class="metric-value">100%</div>
-                        <div class="metric-label">Output Validation</div>
+                    <div class="metric-item">
+                        <span class="metric-num">Auto</span>
+                        <span class="metric-label">Audit</span>
                     </div>
-                    <div class="metric">
-                        <div class="metric-value">YAML</div>
-                        <div class="metric-label">Policy Format</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">Real-time</div>
-                        <div class="metric-label">Violation Alerts</div>
+                    <div class="metric-item">
+                        <span class="metric-num">100+</span>
+                        <span class="metric-label">Rules</span>
                     </div>
                 </div>
-            </section>
 
-            <!-- Architecture -->
-            <section class="project-section">
-                <h2>Architecture</h2>
-                <ul>
-                    <li><strong>Policy Engine:</strong> YAML-based rule definitions</li>
-                    <li><strong>Validator:</strong> DSPy signatures for structured compliance checks</li>
-                    <li><strong>Guardrails:</strong> Pre/post processing filters for LLM outputs</li>
-                    <li><strong>Audit Trail:</strong> Complete logging for regulatory reporting</li>
-                    <li><strong>Web Demo:</strong> Interactive interface for testing policies</li>
-                </ul>
-            </section>
+                <div class="project-cta">
+                    <a href="https://github.com/davidfertube/policy-guard" target="_blank" class="btn">GitHub</a>
+                    <a href="../portfolio.html" class="btn-secondary">← Back</a>
+                </div>
+            </div>
 
-            <!-- Example Policy -->
-            <section class="project-section">
-                <h2>Example Policy</h2>
-                <pre
-                    style="background: #f0f0f0; padding: 1rem; border-radius: 4px; overflow-x: auto; font-family: var(--font-mono); font-size: 0.875rem;">
-policy:
-  name: "HSE Compliance Check"
-  rules:
-    - id: "OSHA-001"
-      check: "No safety equipment bypassing"
-      severity: "critical"
-    - id: "EPA-042"
-      check: "Emissions within permitted limits"
-      severity: "high"
-        </pre>
-            </section>
+            <div class="project-details">
+                <section class="detail-card">
+                    <h2>Problem</h2>
+                    <p>Manual compliance review is error-prone and time-consuming. Regulations change
+                        frequently and keeping systems aligned requires constant vigilance.</p>
+                </section>
 
-            <!-- Technologies -->
-            <section class="project-section">
-                <h2>Technologies</h2>
-                <ul>
-                    <li>DSPy (Stanford NLP)</li>
-                    <li>Python (FastAPI)</li>
-                    <li>YAML Policy Definitions</li>
-                    <li>Azure Functions</li>
-                    <li>React (Web Demo)</li>
-                </ul>
-            </section>
+                <section class="detail-card">
+                    <h2>Solution</h2>
+                    <p>DSPy-powered compliance engine that validates system outputs against regulatory
+                        rules expressed as code. Automated audit pipeline with detailed violation reports.</p>
+                </section>
 
-            <!-- CTA -->
-            <section class="project-section text-center">
-                <a href="https://github.com/davidfertube/policy-guard" target="_blank" rel="noopener" class="btn">
-                    View on GitHub
-                </a>
-                <a href="../portfolio.html" class="btn mt-sm" style="margin-left: 1rem;">
-                    ← Back to Portfolio
-                </a>
-            </section>
+                <section class="detail-card">
+                    <h2>Architecture</h2>
+                    <p>Policy Rules (YAML) → DSPy Signatures → LLM Validation → Violation Detection
+                        → Remediation Suggestions → Compliance Report with audit trail.</p>
+                </section>
+            </div>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="https://github.com/davidfertube" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://www.linkedin.com/in/davidfertube/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://x.com/davidfertube" target="_blank" rel="noopener">Twitter</a>
-        </div>
-        <p>© 2026 David Fernandez</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="../js/project-animations.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            new ProjectAnimations.ShieldBarrier('#projectCanvas', {
-                color: 0xef4444
-            });
-        });
-
         function toggleNav() {
             document.getElementById('navLinks').classList.toggle('active');
         }
