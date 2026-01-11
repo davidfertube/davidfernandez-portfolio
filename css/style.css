@@ -406,29 +406,29 @@ main {
 }
 
 .about-left h1 {
-  font-size: 1.5rem;
-  margin-bottom: var(--space-xs);
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
 }
 
 .about-left .subtitle {
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   color: var(--color-accent);
   text-transform: uppercase;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .about-left .location {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: var(--color-text-light);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 .about-summary {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.25rem;
+  line-height: 1.7;
   color: var(--color-text-light);
-  text-align: left;
+  text-align: center;
 }
 
 .about-right {
@@ -526,7 +526,7 @@ main {
 }
 
 .portfolio-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--color-text-light);
   margin-bottom: var(--space-lg);
 }
@@ -746,18 +746,18 @@ main {
 .portfolio-layout {
   display: flex;
   align-items: center;
-  gap: var(--space-lg);
-  max-width: 1000px;
+  gap: var(--space-xl);
+  max-width: 1400px;
   width: 100%;
 }
 
 .portfolio-header {
-  flex: 0 0 280px;
+  flex: 0 0 350px;
   text-align: center;
 }
 
 .portfolio-header h1 {
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   margin-top: var(--space-sm);
 }
 
@@ -775,9 +775,9 @@ main {
 
 .project-card-compact {
   background: white;
-  border-radius: 6px;
-  padding: var(--space-sm);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: var(--space-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-decoration: none;
   display: block;
@@ -789,16 +789,21 @@ main {
 }
 
 .project-card-compact h3 {
-  font-size: 0.8rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
   color: var(--color-text);
 }
 
 .project-card-compact .tech-stack {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   color: var(--color-accent);
   text-transform: uppercase;
+}
+
+.project-card-compact p {
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
