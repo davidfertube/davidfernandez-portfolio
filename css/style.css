@@ -1713,6 +1713,11 @@ main {
 @media (max-width: 768px) {
   .project-layout {
     flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .project-page {
+    padding: var(--space-md) var(--space-sm);
   }
 
   .project-info {
@@ -1727,9 +1732,41 @@ main {
 
   .project-metrics {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
   }
 
   .project-cta {
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-info h1 {
+    font-size: 1.75rem;
+  }
+
+  .metric-item {
+    padding: var(--space-sm);
+    min-width: 120px;
+  }
+
+  .metric-num {
+    font-size: 1.5rem;
+  }
+
+  .detail-card {
+    padding: var(--space-md);
+  }
+
+  .project-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project-cta .btn,
+  .project-cta .btn-secondary {
+    width: 100%;
+    text-align: center;
   }
 }
